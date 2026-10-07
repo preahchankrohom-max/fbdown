@@ -1,0 +1,6 @@
+{
+  "name": "កម្មវិធីទាញយក Video ពី Facebook HD",
+  "description": "ទាញយកវីដេអូ Facebook ក្នុងកម្រិតខ្ពស់ HD/SD ទាំងវីដេអូទោល វីដេអូច្រើនតំណភ្ជាប់ជាប់គ្នា និងទាញយកវីដេអូពី Profile Facebook ដោយជ្រើសរើសទីតាំងរក្សាទុកជាមុន។",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

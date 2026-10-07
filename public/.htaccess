@@ -1,0 +1,28 @@
+# Apache configuration for InfinityFree Web Hosting
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Route API requests to PHP API script
+  RewriteRule ^api/proxy-download$ api.php?action=proxy-download [L,QSA]
+  RewriteRule ^api/parse$ api.php?action=parse [L,QSA]
+  RewriteRule ^api/extract-reels-from-html$ api.php?action=extract-reels-from-html [L,QSA]
+  RewriteRule ^api/batch-parse$ api.php?action=batch-parse [L,QSA]
+  RewriteRule ^api/(.*)$ api.php?action=$1 [L,QSA]
+
+  # 2. If the request is for an existing file or directory, serve directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 3. Otherwise, rewrite all requests to index.html for React SPA
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# MIME types
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType video/mp4 .mp4
+  AddType image/svg+xml .svg
+</IfModule>

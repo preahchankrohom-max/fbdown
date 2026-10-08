@@ -618,11 +618,6 @@ export default function App() {
       <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* Hero Section */}
         <div className="text-center space-y-4 mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-blue-500/10 border border-pink-500/20 text-pink-300 text-xs font-medium">
-            <Film className="w-3.5 h-3.5 text-pink-400" />
-            <span>គាំទ្រ Facebook Reels HD, 1080p, Watch & កម្រង Reels ច្រើនជាប់គ្នា</span>
-          </div>
-
           {/* User's Exact Requested Text */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white leading-relaxed sm:leading-snug">
             ស្វាគមន៍ ការមកកាន់កម្មវិធីទាញយក Video ពី Facebook
@@ -778,30 +773,12 @@ export default function App() {
           </div>
 
           {/* Action Button Section */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
-            {/* Quick Demo Test Buttons for Reels */}
-            <div className="flex items-center gap-2 overflow-x-auto py-1">
-              <span className="text-xs text-slate-500 whitespace-nowrap">សាកល្បង Reels:</span>
-              {DEMO_SAMPLES.map((sample, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => {
-                    setUrlInput(sample.url);
-                    setInputError(null);
-                  }}
-                  className="px-2.5 py-1 text-[11px] rounded-lg bg-slate-800 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60 whitespace-nowrap transition hover:text-white"
-                >
-                  {sample.name}
-                </button>
-              ))}
-            </div>
-
+          <div className="flex items-center justify-end pt-2">
             {/* Primary Requested Button: 'ទាញយកឥឡូវនេះ' - Opens save location beforehand */}
             <button
               type="button"
               onClick={handleDownloadButtonClick}
-              className="px-7 py-3.5 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-medium text-sm rounded-xl shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2.5 transition-all cursor-pointer whitespace-nowrap"
+              className="w-full sm:w-auto px-8 py-3.5 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-medium text-sm rounded-xl shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2.5 transition-all cursor-pointer whitespace-nowrap"
             >
               <Download className="w-4 h-4" />
               {/* Exact requested button text */}
